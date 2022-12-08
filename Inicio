@@ -1,6 +1,16 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask (_name_)
+app = Flask (__name__)
 
 @app.route('/')
 
+def home ():
+    return render_template('home.html')
+
+@app.route('/almacen')
+def about():
+    return 'Pagina Almacen'
+
+
+if __name__== '__main__':
+    app.run(debug=True)
